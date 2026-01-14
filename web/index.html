@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KalmanCruise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">Kalman smoothing</p>
+        <h1>KalmanCruise</h1>
+        <p>Reduce noise in a measurement series.</p>
+      </header>
+      <section class="panel">
+        <label>Series
+          <input id="seriesInput" value="10,11,9,12,11,10,13" />
+        </label>
+        <div class="grid">
+          <label>Process var <input id="processInput" type="number" value="1" step="0.2" /></label>
+          <label>Measure var <input id="measureInput" type="number" value="4" step="0.5" /></label>
+        </div>
+        <button id="filterButton">Filter</button>
+      </section>
+      <section class="panel">
+        <h2>Filtered</h2>
+        <div id="output" class="output"></div>
+      </section>
+    </main>
+    <div class="cruise"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
